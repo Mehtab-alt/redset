@@ -59,14 +59,6 @@ AddReg=Generic_AddReg.HW
 Include=pci.inf
 Needs=PciD3ColdSupported.HW
 
-[USBXHCI.AddReg]
-HKR,, BootFlags,  0x00010001, 16
-HKR, Parameters, DmaRemappingCompatibleSelfhost, 0x00010001, 1
-HKR, Parameters, DmaRemappingCompatible, 0x00010001, 1
-HKR, Parameters, InterruptPriority, 0x00010001, 1
-HKR, Parameters, PowerManagement, 0x00010001, 0
-HKR, Parameters, DisableSelectiveSuspend, 0x00010001, 1
-
 [Generic.Install.NT.Services]
 AddService=USBXHCI, 2, Generic.AddService
 
@@ -85,7 +77,10 @@ HKR,, BootFlags,  0x00010001, 16 ; CM_SERVICE_USB3_DISK_BOOT_LOAD
 ; Or for internal/all XHCI controllers on selfhost/internal builds with
 ; DMA remapping velocity set for testing purposes.
 HKR, Parameters, DmaRemappingCompatibleSelfhost, 0x00010001, 1
-HKR, Parameters, DmaRemappingCompatible, 0x00010001, 2
+HKR, Parameters, DmaRemappingCompatible, 0x00010001, 1
+HKR, Parameters, InterruptPriority, 0x00010001, 1
+HKR, Parameters, PowerManagement, 0x00010001, 0
+HKR, Parameters, DisableSelectiveSuspend, 0x00010001, 1
 
 [Generic.Install.NT.WMI]
 ; Set access permissions for UI WMI GUIDs
