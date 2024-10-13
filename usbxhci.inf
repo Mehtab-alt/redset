@@ -62,7 +62,7 @@ Needs=PciD3ColdSupported.HW
 [USBXHCI.AddReg]
 HKR,, BootFlags,  0x00010001, 16
 HKR, Parameters, DmaRemappingCompatibleSelfhost, 0x00010001, 1
-HKR, Parameters, DmaRemappingCompatible, 0x00010001, 2
+HKR, Parameters, DmaRemappingCompatible, 0x00010001, 1
 HKR, Parameters, InterruptPriority, 0x00010001, 1
 HKR, Parameters, PowerManagement, 0x00010001, 0
 HKR, Parameters, DisableSelectiveSuspend, 0x00010001, 1
